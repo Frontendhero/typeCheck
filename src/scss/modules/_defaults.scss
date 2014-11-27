@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+html {
+  line-height: 1.4;
+  background-color: #ccc;
+}
+body {
+  font-family: "Arial", Helvetica;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  background: #fff;
+}

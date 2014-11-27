@@ -1,0 +1,23 @@
+{
+  "name": "typeCheck",
+  "title": "JavaScript library for type checking",
+  "author": "Raymon Schouwenaar",
+  "url": "https://github.com/Frontendhero/typeCheck",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frontendhero/typeCheck.git"
+  },
+  "devDependencies": {
+    "browser-sync": "^1.3.0",
+    "gulp": "^3.8.6",
+    "gulp-autoprefixer": "0.0.8",
+    "gulp-header": "^1.0.5",
+    "gulp-jshint": "^1.7.1",
+    "gulp-minify-css": "^0.3.7",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^0.7.2",
+    "gulp-uglify": "^0.3.1"
+  }
+}
