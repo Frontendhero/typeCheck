@@ -41,3 +41,6 @@ $RECYCLE.BIN/
 
 ## Webstorm
 .idea
+
+app\js
+app\css
