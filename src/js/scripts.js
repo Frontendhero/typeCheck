@@ -1,21 +1,31 @@
-(function (window) {
-
+(function () {
   'use strict';
+  // TypeC returns new Library object that hold our selector. Ex: TypeC('.wrapper')
+  var TypeC = function () {
+    return new Library();
+  };
 
-  function typeCheck(){
-    var TypeCheck = {};
-    var name = "Timmy";
-    TypeCheck.greet = function(){
-      alert("Hello from the " + name + " library.");
-    }
-    return TypeCheck;
-  }
-  //define globally if it doesn't already exist
-  if(typeof(TypeCheck) === 'undefined'){
-    window.TypeCheck = typeCheck();
-  }
-  else{
-    console.log("TypeCheck already defined.");
+  var Library = function () {
+    this.is = function(input) {
+    //  check what the type is
+      if(this.isNumber(input)) {return 'number'}
+    };
+    this.isNumber = function(input) {
+      if(typeof input === 'number') {return true;}
+    };
+  };
+
+  // Assign our TypeC object to global window object.
+  if(!window.TypeC) {
+    window.TypeC = TypeC;
   }
 
-})(window);
+  return TypeC();
+
+})();
+
+var typeC = new TypeC();
+var number = 34222;
+
+console.log(typeC.isNumber(number));
+console.log(typeC.is(number));

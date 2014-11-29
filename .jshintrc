@@ -18,6 +18,8 @@
   "unused": true,
   "strict": true,
   "trailing": false,
+  "alert": true,
+  "TypeC": true,
   "smarttabs": true,
   "globals" : {
     "jQuery": true,
