@@ -35,7 +35,7 @@ gulp.task('css', function () {
 });
 
 gulp.task('js',function(){
-  gulp.src('src/js/scripts.js')
+  gulp.src('src/js/*/*.js')
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(header(banner, { package : package }))
@@ -60,6 +60,6 @@ gulp.task('bs-reload', function () {
 
 gulp.task('default', ['css', 'js', 'browser-sync'], function () {
     gulp.watch("src/scss/*/*.scss", ['css']);
-    gulp.watch("src/js/*.js", ['js']);
+    gulp.watch("src/js/*/*.js", ['js']);
     gulp.watch("app/*.html", ['bs-reload']);
 });

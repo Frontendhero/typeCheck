@@ -9,13 +9,17 @@
     this.is = function(input) {
     //  check what the type is
       if(this.isNumber(input)) {return 'number'}
+      if(this.isString(input)) {return 'string'}
     };
     this.isNumber = function(input) {
-      if(typeof input === 'number') {return true;}
+      if(typeof input === 'number') {return true;} else {return false};
+    };
+    this.isString = function(input) {
+      if(typeof input === 'string') {return true;} else {return false};
     };
   };
 
-  // Assign our TypeC object to global window object.
+  // Assign our TypeC object to global window object
   if(!window.TypeC) {
     window.TypeC = TypeC;
   }
@@ -23,9 +27,3 @@
   return TypeC();
 
 })();
-
-var typeC = new TypeC();
-var number = 34222;
-
-console.log(typeC.isNumber(number));
-console.log(typeC.is(number));
